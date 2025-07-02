@@ -73,9 +73,12 @@
         <div class="book-title">{{ book.title }}</div>
         <div class="book-author">{{ book.author }}</div>
         <div class="book-price">{{ book.price }} so'm</div>
+        <a href="{% url 'bookl' book.pk %}">Batafsil</a>
       </div>
     {% endfor %}
   </div>
     <a href="{% url 'home' %}">orqa qaytish</a>
+
+
 </body>
 </html>
