@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <title>{{ book.title }}</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background-color: #f9f9f9;
+      padding: 40px;
+      max-width: 700px;
+      margin: auto;
+      color: #333;
+    }
+
+    .book-detail {
+      background: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    .book-detail img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 6px;
+      margin-bottom: 20px;
+    }
+
+    .book-title {
+      font-size: 26px;
+      font-weight: bold;
+      color: #2c3e50;
+    }
+
+    .book-author {
+      font-size: 16px;
+      color: #777;
+    }
+
+    .book-price {
+      font-size: 20px;
+      color: #009688;
+      margin-top: 10px;
+    }
+
+    .book-description {
+      margin-top: 20px;
+      line-height: 1.6;
+    }
+
+    a.back-link {
+      display: inline-block;
+      margin-top: 30px;
+      color: #3498db;
+      text-decoration: none;
+    }
+
+    a.back-link:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="book-detail">
+    <img src="{{ book.image.url }}" alt="{{ book.title }}">
+    <div class="book-title">{{ book.title }}</div>
+    <div class="book-author">Muallif: {{ book.author }}</div>
+    <div class="book-price">Narx: {{ book.price }} so'm</div>
+    <div class="book-description">
+      <p>{{ book.deck }}</p>
+    </div>
+    
+    <a class="back-link" href="{% url 'kitob' %}">&larr; Ortga — Barcha kitoblar</a>
+  </div>
+
+</body>
+</html>

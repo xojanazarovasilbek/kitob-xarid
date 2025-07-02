@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <title>Kitoblar Do‘koni</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      scroll-behavior: smooth;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      line-height: 1.6;
+      background-color: #f5f5f5;
+    }
+
+    header {
+      background-color: #2c3e50;
+      color: #fff;
+      padding: 20px 0;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav {
+      margin-top: 10px;
+    }
+
+    nav a {
+      color: #fff;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    section {
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    h2 {
+      color: #2c3e50;
+      margin-bottom: 20px;
+    }
+
+    .footer {
+      background-color: #2c3e50;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+
+    a {
+      color: #3498db;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>📚 Kitoblar Do‘koni</h1>
+    <nav>
+      <a href="{% url 'kitob' %}">Kitoblar</a>
+      <a href="{% url 'haqida' %}">Sayt haqida</a>
+      <a href="{% url 'contac' %}">Aloqa</a>
+      <a href="{% url 'manzil' %}">Manzil</a>
+    </nav>
+  </header>
+
+  <section id="haqida">
+    <h2>Sayt haqida</h2>
+    <p>Bu sayt orqali siz eng sara badiiy, ilmiy va motivatsion kitoblarni xarid qilishingiz mumkin. Har bir kitob haqida batafsil ma'lumot va rasm mavjud.</p>
+  </section>
+
+  <section id="aloqa">
+    <h2>Aloqa</h2>
+    <p><strong>Email:</strong> info@kitoblar.uz</p>
+    <p><strong>Telefon:</strong> +998 90 123 45 67</p>
+    <p><strong>Telegram:</strong> <a href="https://t.me/kitoblar_dokoni" target="_blank">@kitoblar_dokoni</a></p>
+  </section>
+
+  <section id="manzil">
+    <h2>Manzil</h2>
+    <p>Toshkent shahri, Chilonzor tumani, Mustaqillik ko‘chasi 12-uy</p>
+    <p>Mo‘ljal: Chilonzor metro bekati</p>
+  </section>
+
+  <div class="footer">
+    &copy; 2025 Kitoblar Do‘koni. Barcha huquqlar himoyalangan.
+  </div>
+
+</body>
+</html>
